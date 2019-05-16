@@ -7,14 +7,21 @@ def bubbleSort(arr):
             if arr[j] > arr[j+1] :
                 arr[j], arr[j+1] = arr[j+1], arr[j]
 
-arr = [20.1, 19.6, 18.0, 17.8, 25.2, 18.7, 21.9, 16.3, 25.4, 20.5, 17.8, 19.3]
+arr = [20.1, 19.6, 18.0, 17.8, 25.2, 18.7, 21.9, 16.3, 25.4, 20.5, 17.8]
 newarr = []
+full = 0
 
+#Get average
+for i in arr:
+    full += i
+#Call bubbleSort function
 bubbleSort(arr)
-f = open("num.txt", "w+")
-print ("Sorted array is:")
+#Make newarr
 for i in range(len(arr)):
-    f.write("%d" %arr[i] + "\n")
     newarr.append(arr[i])
-print(newarr[len(newarr) - 1] - newarr[0])
-print(newarr)
+#Get range of newarr
+print("Range: " + str(newarr[len(newarr) - 1] - newarr[0]))
+#Get average of newarr
+print("Average: " + str(int(full / len(newarr))))
+#Print newarr
+print("Sorted arry is: " + str(newarr))

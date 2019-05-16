@@ -1,5 +1,3 @@
-import random
-
 #bubbleSort function(will be called later)
 def bubbleSort(arr):
     n = len(arr)
